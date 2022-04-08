@@ -41,8 +41,6 @@ func Query(resp http.ResponseWriter, req *http.Request) {
 		}
 
 		data = append(data, ebu)
-
-		// fmt.Fprintf(resp, "%v\n", data)
 	}
 
 		tmpl, err := template.ParseGlob("/home/nihan/Documents/GolangTemplate/templates/*.html")
@@ -52,6 +50,4 @@ func Query(resp http.ResponseWriter, req *http.Request) {
 		}
 
 		tmpl.ExecuteTemplate(resp, "index.html", data)
-
-		// fmt.Fprintf(resp, "%v\n", data)
 }
