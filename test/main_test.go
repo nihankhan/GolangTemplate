@@ -8,7 +8,7 @@ import (
 var client = &http.Client{}
 
 func CheckRouter (t *testing.T) {
-	req, err := http.NewRequest("GET", "http://127.0.0.1:8080/p", nil)
+	req, err := http.NewRequest("GET", "http://127.0.0.1:8080/", nil)
 
 	if err != nil {
 		t.Fail()
